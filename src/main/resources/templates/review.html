@@ -33,17 +33,17 @@
 
 		<p th:text="'Review Date: ' + ${review.date}"></p>
 
-
-		<p th:each="tag: ${review.tags}">
-			<a th:href="@{/singleTag(id=${tag.id})}" th:text="${tag.name}"></a>
-		</p>
-
-
-		<li th:each="tag: ${review.tags}">
-			<a th:href="@{/singleTag(id=${tag.id})}" th:text="${tag.name}"></a>
-		</li>
-
-
+		<p th:if="${review.getTagCount()} &gt; 0" th:text="'Tag: '"></p>
+		 
+		<ul th:if="${review.getTagCount()} &gt; 0">
+			<li th:each="tag: ${review.tags}">
+				<a tag-count="0" class="tag"
+					th:attr="tag-count = ${tag.getTaggedPizzaReviewsSize()}"
+					th:href="@{/singleTag(id=${tag.id})}" th:text="${tag.name}">
+				</a>
+			</li>
+		</ul>
+		
 		<p>
 			<a class="centerText" th:href="${review.website}">Company Website</a>
 		</p>

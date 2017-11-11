@@ -3,8 +3,8 @@
 <html xmlns:th="http://www.thymeleaf.org">
 
 <head>
-	<title>Pizza Review Categories</title>
-	<link rel = "stylesheet" type = "text/css" th:href = "style.css" />
+<title>Pizza Review Categories</title>
+<link rel="stylesheet" type="text/css" th:href="style.css" />
 </head>
 
 <body>
@@ -13,28 +13,16 @@
 	</header>
 
 	<ul>
-		<li th:each="category: ${categories}">
-			<a th:href="@{/singleCategory(id=${category.id})}" th:text="${category.name}"></a>
-		</li>
+		<li th:each="category: ${categories}"><a
+			th:href="@{/singleCategory(id=${category.id})}"
+			th:text="${category.name}"></a></li>
 	</ul>
 
-	<ul>
-		<li th:each="tag: ${allTags}">
-			<a th:href="@{/singleTag(id=${tag.id})}" th:text="${tag.name}"></a>
-		</li>
-	</ul>
-
-	<p th:each="tag: ${allTags}" >
-			<a tag-count="0" class="tag" th:attr="tag-count = ${tag.getTaggedPizzaReviewsSize()}" 
+	<p th:each="tag: ${allTags}">
+		<a tag-count="0" class="tag"
+			th:attr="tag-count = ${tag.getTaggedPizzaReviewsSize()}"
 			th:href="@{/singleTag(id=${tag.id})}" th:text="${tag.name}"></a>
-		</p>
-
-		<p th:each="tag: ${allTags}" >
-	        <span th:class = "'tagsize' + ${tag.getTaggedPizzaReviewsSize()}">
-	        <p th:text = "${tag.getTaggedPizzaReviewsSize()}"></p>
-			<a th:href="@{/singleTag(id=${tag.id})}" th:text="${tag.name}"></a>
-			</span>
-		</p>
+	</p>
 
 </body>
 </html>

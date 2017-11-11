@@ -90,6 +90,10 @@ public class PizzaReview {
 		return tags;
 	}
 
+	public int getTagCount() {
+		return tags.size();
+	}
+
 	@Override
 	public String toString() {
 
