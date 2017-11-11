@@ -28,9 +28,15 @@ public class PizzaReviewController {
 	}
 
 	@RequestMapping("/singleCategory")
-	public String getOneCategories(@RequestParam(value = "id") Long id, Model model) {
+	public String getOneCategory(@RequestParam(value = "id") Long id, Model model) {
 		model.addAttribute("category", categoryRepo.findOne(id));
 		return "category"; // the html page for a specific category
+	}
+
+	@RequestMapping("/singleTag")
+	public String getOneTag(@RequestParam(value = "id") Long id, Model model) {
+		model.addAttribute("tag", tagRepo.findOne(id));
+		return "singleTag"; // the html page for a specific tag
 	}
 
 	@RequestMapping("/reviewList")

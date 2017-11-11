@@ -34,6 +34,10 @@ public class Tag {
 		return name;
 	}
 
+	public Set<PizzaReview> getTaggedPizzaReviews() {
+		return taggedPizzaReviews;
+	}
+
 	@Override
 	public String toString() {
 		return "Tag [id=" + id + ", name=" + name + ", taggedPizzaReviews=" + taggedPizzaReviews + "]";
