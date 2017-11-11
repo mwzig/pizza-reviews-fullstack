@@ -33,6 +33,17 @@
 
 		<p th:text="'Review Date: ' + ${review.date}"></p>
 
+
+		<p th:each="tag: ${review.tags}">
+			<a th:href="@{/singleTag(id=${tag.id})}" th:text="${tag.name}"></a>
+		</p>
+
+
+		<li th:each="tag: ${review.tags}">
+			<a th:href="@{/singleTag(id=${tag.id})}" th:text="${tag.name}"></a>
+		</li>
+
+
 		<p>
 			<a class="centerText" th:href="${review.website}">Company Website</a>
 		</p>

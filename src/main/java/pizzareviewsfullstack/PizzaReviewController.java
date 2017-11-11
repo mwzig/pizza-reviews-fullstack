@@ -11,6 +11,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class PizzaReviewController {
 
 	@Resource
+	TagRepository tagRepo;
+
+	@Resource
 	PizzaReviewRepository reviewRepo;
 
 	@Resource
@@ -19,6 +22,8 @@ public class PizzaReviewController {
 	@RequestMapping("/categoryList")
 	public String getAllCategories(Model model) {
 		model.addAttribute("categories", categoryRepo.findAll());
+		System.out.println("tag repo size" + tagRepo.count());
+		model.addAttribute("allTags", tagRepo.findAll());
 		return "categories"; // the html page for the list of categories
 	}
 

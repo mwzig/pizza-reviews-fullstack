@@ -37,8 +37,8 @@ public class PizzaReview {
 	}
 
 	public PizzaReview(String title, String imageURL, String content, String address, String website, String date,
-			int rating, Category category, Tag... tags) {
-		super();
+			int rating, Category category, Tag... tag) {
+
 		this.title = title;
 		this.imageURL = imageURL;
 		this.content = content;
@@ -47,7 +47,7 @@ public class PizzaReview {
 		this.date = date;
 		this.rating = rating;
 		this.category = category;
-		this.tags = new HashSet<Tag>(Arrays.asList(tags));
+		this.tags = new HashSet<Tag>(Arrays.asList(tag));
 	}
 
 	public Long getId() {
@@ -92,9 +92,21 @@ public class PizzaReview {
 
 	@Override
 	public String toString() {
-		return "PizzaReview [id=" + id + ", title=" + title + ", imageURL=" + imageURL + ", content=" + content
-				+ ", address=" + address + ", website=" + website + ", date=" + date + ", rating=" + rating
-				+ ", category=" + category + ", tags=" + tags + "]";
+
+		if (tags.size() > 0) {
+
+			System.out.println("tags.size() = " + tags.size());
+			for (Tag s : tags) {
+				System.out.println(s.name);
+			}
+
+			return "PizzaReview [id=" + id + ", title=" + title + "]";
+		} else {
+			return "PizzaReview [id=" + id + ", title=" + title + ", imageURL=" + imageURL + ", content=" + content
+					+ ", address=" + address + ", website=" + website + ", date=" + date + ", rating=" + rating
+					+ ", category=" + category + ", tags=(not tagged)" + "]";
+
+		}
 	}
 
 }

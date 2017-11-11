@@ -23,6 +23,9 @@ public class PizzaReviewPopulator implements CommandLineRunner {
 		Tag thinCrust = new Tag("Thin Crust");
 		tagRepo.save(thinCrust);
 
+		Tag medCrust = new Tag("Medium Crust");
+		tagRepo.save(medCrust);
+
 		Tag thickCrust = new Tag("Thick Crust");
 		tagRepo.save(thickCrust);
 
@@ -37,14 +40,20 @@ public class PizzaReviewPopulator implements CommandLineRunner {
 
 		Category frozen = new Category("Frozen");
 		categoryRepo.save(frozen);
+
 		Category carryOut = new Category("Carry-Out");
 		categoryRepo.save(carryOut);
+
 		Category restaurant = new Category("Restaurant");
 		categoryRepo.save(restaurant);
 
 		PizzaReview rev1 = new PizzaReview("Digiorno Rising Crust Pizza", "../images/Digiorno.png",
 				"Self-rising crust has big, juicy toppings that are paired with a delicious signature sauce", "",
-				"http://www.digiorno.com", "10/27/2017", 3, frozen);
+				"http://www.digiorno.com", "10/27/2017", 3, frozen, medCrust);
+
+		System.out.println("testing1 !!!" + " tag is " + medCrust);
+		System.out.println("testing2 !!!" + " category is " + frozen);
+		System.out.println("testing3 !!!" + " PizzaReview is " + rev1);
 
 		PizzaReview rev2 = new PizzaReview("Freschetta Naturally Rising Crust Pizza", "../images/Freschetta.jpg",
 				"The cheesier the better. Mozzarella, cheddar, provolone and parmesan make the 4-Cheese pizza a sure bet on any pizza night.",
@@ -52,11 +61,11 @@ public class PizzaReviewPopulator implements CommandLineRunner {
 
 		PizzaReview rev3 = new PizzaReview("Benny's Pizza", "../images/Bennys.jpg",
 				"The best. Always great, dine in or carry out.  Nice crust, tasty sauce, plenty of cheese and good toppings.",
-				"Marysville", "http://www.bennyspizza.com", "10/27/2017", 5, restaurant);
+				"Marysville", "http://www.bennyspizza.com", "10/27/2017", 5, restaurant, thinCrust, squareCut);
 
 		PizzaReview rev4 = new PizzaReview("Dewey's Pizza", "../images/Deweys.jpg",
 				"Delicious pizza made from scratch.  Fast, friendly service. Great dine-in experience. (Carry-out has not been good).",
-				"Worthington", "http://www.deweyspizza.com", "10/27/2017", 5, restaurant);
+				"Worthington", "http://www.deweyspizza.com", "10/27/2017", 5, restaurant, triangleCut, thinCrust);
 
 		PizzaReview rev5 = new PizzaReview("Panzera's Pizza", "../images/Panzeras.jpg",
 				"Great neighborhood pizza maker - consistently delicious pizza.",
