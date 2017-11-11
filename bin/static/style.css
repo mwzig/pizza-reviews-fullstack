@@ -81,4 +81,39 @@
 		width: 20px;
 		display: inline;
 	}
+
+
+[data-count~=0 1 2 3] {
+	
 }
+
+/* cheat here by setting the tag font size to
+   big as a default.  Then set it to small
+   or medium based on the number of times the tag is used */
+
+.tag  {
+	background-color: green;
+	font-size: 4rem;	
+}
+
+[tag-count~="0"]  {
+	background-color: white;
+	font-size: 1rem;
+	
+}
+
+[tag-count~="1"], [tag-count~="2"]  {
+	background-color: hotpink;
+	font-size: 2rem;
+	
+}
+[tag-count~="3"],[tag-count~="4"]  {
+	background-color: blue;
+	font-size: 3rem;
+	
+}
+ 
+/*the link tells how to do a better way of selecting attributes with < or > values 
+for sake of time, I am doing it the easy way here 
+https://www.bram.us/2016/10/13/css-attribute-value-less-than-greater-than-equals-selectors/
+*/

@@ -38,6 +38,10 @@ public class Tag {
 		return taggedPizzaReviews;
 	}
 
+	public int getTaggedPizzaReviewsSize() {
+		return taggedPizzaReviews.size();
+	}
+
 	@Override
 	public String toString() {
 		return "Tag [id=" + id + ", name=" + name + ", taggedPizzaReviews=" + taggedPizzaReviews + "]";

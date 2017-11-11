@@ -24,5 +24,17 @@
 		</li>
 	</ul>
 
+	<p th:each="tag: ${allTags}" >
+			<a tag-count="0" class="tag" th:attr="tag-count = ${tag.getTaggedPizzaReviewsSize()}" 
+			th:href="@{/singleTag(id=${tag.id})}" th:text="${tag.name}"></a>
+		</p>
+
+		<p th:each="tag: ${allTags}" >
+	        <span th:class = "'tagsize' + ${tag.getTaggedPizzaReviewsSize()}">
+	        <p th:text = "${tag.getTaggedPizzaReviewsSize()}"></p>
+			<a th:href="@{/singleTag(id=${tag.id})}" th:text="${tag.name}"></a>
+			</span>
+		</p>
+
 </body>
 </html>
