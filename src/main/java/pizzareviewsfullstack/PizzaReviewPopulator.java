@@ -9,6 +9,9 @@ import org.springframework.stereotype.Component;
 public class PizzaReviewPopulator implements CommandLineRunner {
 
 	@Resource
+	private TagRepository tagRepo;
+
+	@Resource
 	private CategoryRepository categoryRepo;
 
 	@Resource
@@ -16,6 +19,22 @@ public class PizzaReviewPopulator implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
+
+		Tag thinCrust = new Tag("Thin Crust");
+		tagRepo.save(thinCrust);
+
+		Tag thickCrust = new Tag("Thick Crust");
+		tagRepo.save(thickCrust);
+
+		Tag woodFired = new Tag("Wood-Fired");
+		tagRepo.save(woodFired);
+
+		Tag triangleCut = new Tag("Triangle-Cut");
+		tagRepo.save(triangleCut);
+
+		Tag squareCut = new Tag("Square-Cut");
+		tagRepo.save(squareCut);
+
 		Category frozen = new Category("Frozen");
 		categoryRepo.save(frozen);
 		Category carryOut = new Category("Carry-Out");

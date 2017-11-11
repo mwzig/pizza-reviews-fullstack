@@ -1,9 +1,14 @@
 package pizzareviewsfullstack;
 
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Lob;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 
 @Entity
@@ -25,11 +30,15 @@ public class PizzaReview {
 	@ManyToOne
 	private Category category;
 
+	@ManyToMany
+	private Set<Tag> tags;
+
 	public PizzaReview() {
 	}
 
 	public PizzaReview(String title, String imageURL, String content, String address, String website, String date,
-			int rating, Category category) {
+			int rating, Category category, Tag... tags) {
+		super();
 		this.title = title;
 		this.imageURL = imageURL;
 		this.content = content;
@@ -38,6 +47,7 @@ public class PizzaReview {
 		this.date = date;
 		this.rating = rating;
 		this.category = category;
+		this.tags = new HashSet<Tag>(Arrays.asList(tags));
 	}
 
 	public Long getId() {
@@ -76,11 +86,15 @@ public class PizzaReview {
 		return category;
 	}
 
+	public Set<Tag> getTags() {
+		return tags;
+	}
+
 	@Override
 	public String toString() {
 		return "PizzaReview [id=" + id + ", title=" + title + ", imageURL=" + imageURL + ", content=" + content
 				+ ", address=" + address + ", website=" + website + ", date=" + date + ", rating=" + rating
-				+ ", category=" + category + "]";
+				+ ", category=" + category + ", tags=" + tags + "]";
 	}
 
 }
