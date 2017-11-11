@@ -19,7 +19,13 @@ public class PizzaReviewController {
 	@RequestMapping("/categoryList")
 	public String getAllCategories(Model model) {
 		model.addAttribute("categories", categoryRepo.findAll());
-		return "categories"; // the html page for the list of reviews
+		return "categories"; // the html page for the list of categories
+	}
+
+	@RequestMapping("/singleCategory")
+	public String getOneCategories(@RequestParam(value = "id") Long id, Model model) {
+		model.addAttribute("category", categoryRepo.findOne(id));
+		return "category"; // the html page for a specific category
 	}
 
 	@RequestMapping("/reviewList")

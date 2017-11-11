@@ -3,6 +3,7 @@ package pizzareviewsfullstack;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Lob;
 import javax.persistence.ManyToOne;
 
 @Entity
@@ -13,7 +14,9 @@ public class PizzaReview {
 	private Long id;
 	private String title;
 	private String imageURL;
+	@Lob
 	private String content;
+
 	private String address;
 	private String website;
 	private String date;

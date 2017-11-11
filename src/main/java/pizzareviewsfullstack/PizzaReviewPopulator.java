@@ -49,20 +49,21 @@ public class PizzaReviewPopulator implements CommandLineRunner {
 				"Grandview - 5th Avenue", "http://www.rotolospizza.com/", "10/27/2017", 4, carryOut);
 
 		reviewRepo.save(rev1);
-
-		System.out.println(rev1.getAddress());
-		System.out.println(rev1.getContent());
-		System.out.println(rev1.getDate());
-		System.out.println(rev1.getImageURL());
-		System.out.println(rev1.getRating());
-		System.out.println(rev1.getWebsite());
-		System.out.println(rev1.getCategory().getName());
-
 		reviewRepo.save(rev2);
 		reviewRepo.save(rev3);
 		reviewRepo.save(rev4);
 		reviewRepo.save(rev5);
 		reviewRepo.save(rev6);
+
+		PizzaReview rev7 = new PizzaReview("LotsOText Pizza", "../images/Rotolos.jpg",
+				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer at mi sed turpis pretium sodales. Curabitur vestibulum sapien ac tellus lobortis, ac interdum ex condimentum. Pellentesque tristique dui eu auctor fringilla. Fusce porta in magna ut ultrices. Donec hendrerit nulla et ullamcorper venenatis. Quisque ullamcorper laoreet dui eu posuere. Duis condimentum odio at justo tristique, quis cursus turpis dapibus. "
+						+ "Cras dui arcu, laoreet at erat eget, dictum fermentum lectus. Quisque semper orci non leo rutrum scelerisque eget ut leo. Sed interdum varius leo vel scelerisque. Vestibulum mollis lacinia sem ac imperdiet. Ut tempor pulvinar enim, eget congue sem semper in. Pellentesque at lacinia enim, aliquam hendrerit metus. Sed vel massa eu tellus malesuada finibus. Praesent nibh risus, maximus in feugiat aliquet, aliquam vitae arcu. Nullam id nisl ac turpis congue fermentum nec vel est. Aenean nec risus vel velit accumsan viverra. Praesent vitae leo porta, varius nisl vitae, rhoncus enim. Vivamus aliquam, nibh et porttitor varius, mi mi consectetur nisi, hendrerit imperdiet risus velit eget lectus. "
+						+ "Aenean erat lacus, fermentum ac tellus ac, consectetur ornare risus. Duis vel lacus tortor. Mauris venenatis at metus et lobortis. Mauris a fermentum mauris. Quisque commodo dignissim ligula ut ornare. Suspendisse at turpis et erat vehicula varius. Donec id gravida turpis. Curabitur ut ultrices purus, eu viverra orci. Phasellus dapibus placerat sem ut eleifend. Pellentesque dapibus eu ligula scelerisque tincidunt. Nam eros nisl, fringilla vel tincidunt posuere, euismod nec tortor. Duis pulvinar ut sem non volutpat. Vestibulum pretium orci ipsum, ac lacinia augue ultricies ut. Mauris interdum dui tellus, at tincidunt lacus hendrerit ac. Donec iaculis ante id dui venenatis euismod. Nunc faucibus, nisi non dictum maximus, enim arcu placerat orci, nec maximus ligula quam quis enim. "
+						+ "In interdum, est semper tempor tincidunt, justo mi feugiat ex, aliquet porttitor enim ipsum eget augue. Sed ornare, ligula vel rutrum accumsan, tellus ligula fringilla enim, vitae imperdiet ligula risus nec sem. Fusce diam metus, semper non semper id, ullamcorper non justo. Praesent dictum dapibus tortor ac viverra. Maecenas rutrum ex eget magna mattis, quis mattis mi tincidunt. Cras arcu lacus, mattis nec congue quis, vehicula malesuada nulla. Morbi justo mauris, mollis et faucibus ac, aliquet non felis. In congue velit et lectus iaculis egestas. "
+						+ "Etiam eu dui viverra, commodo elit et, rutrum urna. Suspendisse potenti. Maecenas euismod ipsum vitae erat aliquet, vitae feugiat odio eleifend. Sed tempor feugiat ante, sed posuere nunc tempor vel. Sed tincidunt at nibh at sollicitudin. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla porta turpis et est egestas tincidunt. Nulla ut hendrerit arcu, id interdum diam.",
+				"Timbuktu", "http://www.rotolospizza.com/", "10/27/2017", 4, carryOut);
+
+		reviewRepo.save(rev7);
 
 	}
 

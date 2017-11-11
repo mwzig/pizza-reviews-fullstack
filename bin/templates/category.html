@@ -3,42 +3,27 @@
 <html xmlns:th="http://www.thymeleaf.org">
 
 <head>
-	<title>Pizza Reviews for </title>
+	<title>Pizza Reviews</title>
 	<link rel="stylesheet" type="text/css" th:href="style.css" />
 </head>
 
 <body>
 
 	<header>
-		<h1 id="reviewDetailHeader">Pizza Review</h1>
+		<h1 id="reviewDetailHeader" th:text = "${category.name} + ' Pizza Reviews'"></h1>
 	</header>
 
 	<section class="center">
 
-		<img th:src="${review.imageURL}" alt="pizza image" />
+	
+		<ul>
+			<li th:each="pizzaReview: ${category.pizzaReviews}">
+				<a th:href="@{/singleReview(id=${pizzaReview.id})}" th:text="${pizzaReview.title}"></a>
+			</li>
+		</ul>
 
-		<h2 class="centerText italicText" th:text="${review.getTitle()}"></h2>
-
-		<p th:text="${review.content}"></p>
-
-		<p th:text="'Category: ' + ${review.category.name}"></p>
-
-		<p th:if="${not #strings.isEmpty(review.address)}" th:text="'Location: ' + ${review.address}" ></p>
-
-		<p class="rating" th:text="'Rating: (out of 5) '"></p>
-
-		<img class="rating" id="ratingStar"
-			th:each="i : ${#numbers.sequence( 1, review.rating)}"
-			src="images/smooth-star.jpg" alt="*" />
-
-		<p th:text="'Review Date: ' + ${review.date}"></p>
-
-		<p>
-			<a class="centerText" th:href="${review.website}">Company Website</a>
-		</p>
-
-		<a class="centerText" href="http://localhost:8080/reviewList">Back
-			to home</a>
+		<a class="centerText" href="http://localhost:8080/categoryList">Back
+			to Home</a>
 
 		</section>
 
