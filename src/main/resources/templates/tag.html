@@ -9,12 +9,12 @@
 
 <body>
 	<header id="reviewsListHeader">
-		<h1>My Pizza Reviews</h1>
+		<h1 th:text="${tag.name} + ' Pizza Reviews'"></h1>
 	</header>
 
 	<ul>
-		<li th:each="review: ${reviews}">
-			<a th:href="@{/singleReview(id=${review.id})}" th:text="${review.title}"></a>
+		<li th:each="pizzaReview: ${tag.taggedPizzaReviews}">
+			<a th:href="@{/singleReview(id=${pizzaReview.id})}" th:text="${pizzaReview.title}"></a>
 		</li>
 	</ul>
 

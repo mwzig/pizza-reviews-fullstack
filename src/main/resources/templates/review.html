@@ -31,6 +31,10 @@
 			th:each="i : ${#numbers.sequence( 1, review.rating)}"
 			src="images/smooth-star.jpg" alt="*" />
 
+		<p>
+			<a th:href="${review.website}">Company Website</a>
+		</p>
+
 		<p th:text="'Review Date: ' + ${review.date}"></p>
 
 		<p th:if="${review.getTagCount()} &gt; 0" th:text="'Tag: '"></p>
@@ -44,11 +48,7 @@
 			</li>
 		</ul>
 		
-		<p>
-			<a class="centerText" th:href="${review.website}">Company Website</a>
-		</p>
-
-		<a class="centerText" href="http://localhost:8080/categoryList">Back
+				<a class="centerText" href="http://localhost:8080/categoryList">Back
 			to home</a>
 
 		</section>

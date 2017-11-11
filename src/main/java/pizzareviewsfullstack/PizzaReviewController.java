@@ -36,13 +36,7 @@ public class PizzaReviewController {
 	@RequestMapping("/singleTag")
 	public String getOneTag(@RequestParam(value = "id") Long id, Model model) {
 		model.addAttribute("tag", tagRepo.findOne(id));
-		return "singleTag"; // the html page for a specific tag
-	}
-
-	@RequestMapping("/reviewList")
-	public String getAllCourses(Model model) {
-		model.addAttribute("reviews", reviewRepo.findAll());
-		return "reviews"; // the html page for the list of reviews
+		return "tag"; // the html page for a specific tag
 	}
 
 	@RequestMapping("/singleReview")

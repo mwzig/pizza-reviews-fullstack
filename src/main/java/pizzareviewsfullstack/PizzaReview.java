@@ -98,18 +98,11 @@ public class PizzaReview {
 	public String toString() {
 
 		if (tags.size() > 0) {
-
-			System.out.println("tags.size() = " + tags.size());
-			for (Tag s : tags) {
-				System.out.println(s.name);
-			}
-
 			return "PizzaReview [id=" + id + ", title=" + title + "]";
 		} else {
 			return "PizzaReview [id=" + id + ", title=" + title + ", imageURL=" + imageURL + ", content=" + content
 					+ ", address=" + address + ", website=" + website + ", date=" + date + ", rating=" + rating
 					+ ", category=" + category + ", tags=(not tagged)" + "]";
-
 		}
 	}
 
