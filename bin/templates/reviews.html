@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title>Pizza Reviews</title>
+	<link rel = "stylesheet" type = "text/css" th:href = "style.css" />
+</head>
+
+<body>
+	<header id="reviewsListHeader">
+		<h1>My Pizza Reviews</h1>
+	</header>
+
+	<ul>
+		<li th:each="review: ${reviews}">
+			<a th:href="@{/singleReview(id=${review.id})}" th:text="${review.title}"></a>
+		</li>
+	</ul>
+
+</body>
+</html>
