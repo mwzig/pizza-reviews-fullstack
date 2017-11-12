@@ -21,27 +21,27 @@
 	
 		    <div class="cat-list">
 				<div  th:each="category: ${categories}">
- 						<a th:href="@{/singleCategory(id=${category.id})}">
- 							<img class="cat-img" th:src="${category.imageURL}" alt="category image"/>
- 							
- 						</a>
-				
-				<h3>
-					<a th:href="@{/singleCategory(id=${category.id})}"
+ 					<a th:href="@{/singleCategory(id=${category.id})}">
+ 						<img class="cat-img" th:src="${category.imageURL}" alt="category image"/>
+ 					</a>
+					<h3>
+						<a th:href="@{/singleCategory(id=${category.id})}"
 					   th:text="${category.name}">
-					</a>
-				</h3>
-		
- 				</div>
+						</a>
+					</h3>
+				</div>
  			</div>
-				
-
-			<p th:each="tag: ${allTags}">
-				<a tag-count="0" class="tag"
-					th:attr="tag-count = ${tag.getTaggedPizzaReviewsSize()}"
-					th:href="@{/singleTag(id=${tag.id})}" th:text="${tag.name}">
-				</a>
-			</p>
+			
+			<div class="tag-list">
+				<ul>
+					<li th:each="tag: ${allTags}">
+						<a tag-count="0" class="tag"
+							th:attr="tag-count = ${tag.getTaggedPizzaReviewsSize()}"
+							th:href="@{/singleTag(id=${tag.id})}" th:text="${tag.name}">
+						</a>
+					</li>
+				</ul>
+			</div>
 	
 		</main>
 		<footer>

@@ -10,28 +10,46 @@
    .container {
 	display: grid;
     grid-gap: var(--grid-gap);
-	grid-template-rows: auto auto 150px;
+	grid-template-rows: 30vh auto 5vh;
      // make the height take up all of the vewport height units
     height: calc(100vh - (var(--grid-gap) *2));
     width: auto;
-    margin: var(--grid-gap);
+    /*margin: var(--grid-gap);*/
 
 }
 
+main {
+	width: 75vw;
+    margin: auto;
+    display: grid;
+    grid-template-rows: 2;
+}
+    
+
 .cat-list {
+	
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: var(--grid-gap);
 }
 
 .cat-img {
-	width: 30vw;
+	width: 20vw;
 	height: 30vh;	
 }
 
 .cat-list h3 {
 	display: flex;
 	justify-content: space-around;
+}
+
+.tag-list li {
+	padding: .5rem;
+}
+.tag-list ul{
+	display: flex;
+	flex-wrap: wrap;
+	
 }
 
 }
