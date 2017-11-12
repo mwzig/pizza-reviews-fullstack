@@ -1,0 +1,46 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --grid-gap: 5px;
+}
+
+   .container {
+	display: grid;
+    grid-gap: var(--grid-gap);
+	grid-template-rows: auto auto 150px;
+    height: calc(100vh - (var(--grid-gap) *2));
+     // make the height take up all of the vewport height units
+    height: calc(100vh - (var(--grid-gap) *2));
+    width: auto;
+    margin: var(--grid-gap);
+
+}
+
+}
+/*
+.main__content {
+	display: grid;
+	grid-gap: var(--grid-gap);
+	
+	 
+}
+
+.main__sidebar {
+	display: grid;
+	grid-gap: var(--grid-gap);
+	
+}
+
+.header {
+	grid-column-start: 1;
+    grid-column-end:  -1;
+}
+
+.footer {
+	grid-column-start: 1;
+    grid-column-end:  -1;
+}
+*/
