@@ -23,7 +23,7 @@ main {
 	width: 75vw;
     margin: auto;
     display: grid;
-    grid-template-rows: 2;
+    
 }
     
 footer {
@@ -55,6 +55,10 @@ footer p {
 .cat-list h3 {
 	display: flex;
 	justify-content: space-around;
+}
+
+.tag-list {
+	padding-top: 1.5rem;
 }
 
 .tag-list li {
