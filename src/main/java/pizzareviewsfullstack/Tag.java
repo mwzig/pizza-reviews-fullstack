@@ -22,7 +22,6 @@ public class Tag {
 	}
 
 	public Tag(String name) {
-		super();
 		this.name = name;
 	}
 

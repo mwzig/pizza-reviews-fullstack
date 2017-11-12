@@ -98,7 +98,9 @@ public class PizzaReview {
 	public String toString() {
 
 		if (tags.size() > 0) {
-			return "PizzaReview [id=" + id + ", title=" + title + "]";
+			return "PizzaReview [id=" + id + ", title=" + title + ", imageURL=" + imageURL + ", content=" + content
+					+ ", address=" + address + ", website=" + website + ", date=" + date + ", rating=" + rating
+					+ ", category=" + category + ", tags=" + tags + "]";
 		} else {
 			return "PizzaReview [id=" + id + ", title=" + title + ", imageURL=" + imageURL + ", content=" + content
 					+ ", address=" + address + ", website=" + website + ", date=" + date + ", rating=" + rating
