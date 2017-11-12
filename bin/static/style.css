@@ -94,6 +94,10 @@ img {
 	text-decoration: none;
 }
 
+h3 a{
+	text-decoration: none;
+}
+
 [tag-count~="0"] {
 	font-size: .8rem;
 }

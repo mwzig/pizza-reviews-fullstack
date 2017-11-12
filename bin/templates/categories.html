@@ -20,11 +20,18 @@
 		<main>
 	
 		    <div class="cat-list">
-				<div  th:each="category: ${categories}">	
+				<div  th:each="category: ${categories}">
  						<a th:href="@{/singleCategory(id=${category.id})}">
  							<img class="cat-img" th:src="${category.imageURL}" alt="category image"/>
  							
  						</a>
+				
+				<h3>
+					<a th:href="@{/singleCategory(id=${category.id})}"
+					   th:text="${category.name}">
+					</a>
+				</h3>
+		
  				</div>
  			</div>
 				

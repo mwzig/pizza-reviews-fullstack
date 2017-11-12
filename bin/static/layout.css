@@ -25,8 +25,13 @@
 }
 
 .cat-img {
-	width: 30vh;
+	width: 30vw;
 	height: 30vh;	
+}
+
+.cat-list h3 {
+	display: flex;
+	justify-content: space-around;
 }
 
 }
