@@ -32,6 +32,7 @@ body {
 	font-family: 'Open Sans', sans-serif;
 }
 
+
 ul {
 	list-style-type: none;
 	font-size: 1.5em;
@@ -42,7 +43,7 @@ a:hover {
 	color: rgb(193, 68, 57);
 }
 
-li a {
+li a, h3 a {
 	text-decoration: none;
 	color: rgb(22, 22, 22);
 }
@@ -50,6 +51,8 @@ li a {
 li a:visited {
 	color: rgb(112, 112, 112);
 }
+
+
 
 img {
 	display: block;
@@ -91,10 +94,6 @@ img {
 */
 .tag {
 	font-size: 2rem;
-	text-decoration: none;
-}
-
-h3 a{
 	text-decoration: none;
 }
 
