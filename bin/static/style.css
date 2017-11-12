@@ -32,7 +32,6 @@ body {
 	font-family: 'Open Sans', sans-serif;
 }
 
-
 ul {
 	list-style-type: none;
 	font-size: 1.5em;
@@ -51,8 +50,6 @@ li a, h3 a {
 li a:visited {
 	color: rgb(112, 112, 112);
 }
-
-
 
 img {
 	display: block;
