@@ -18,16 +18,35 @@
 		</header>
 
 		<main>
-	
-		    <div class="cat-list">
-				<div  th:each="category: ${categories}">	
+			<ul>
+				<li th:each="category: ${categories}"><a
+					th:href="@{/singleCategory(id=${category.id})}"
+					th:text="${category.name}"></a>
+				</li>
+			</ul>
+
+			<div class="cat-list">
+			<ul>
+				<!-- 
+				<li th:each="category: ${categories}"><a
+					th:href="@{/singleCategory(id=${category.id})}"
+					th:text="${category.name}"></a>
+					<a th:href="@{/singleCategory(id=${category.id})}">
+					
+					<img th:src="${category.imageURL}" alt="category pizza image" />
+					</a>
+					<img th:src="${category.imageURL}" alt="pizza image" />
+					
+				</li>
+ -->				<li th:each="category: ${categories}">	
  						<a th:href="@{/singleCategory(id=${category.id})}">
- 							<img class="cat-img" th:src="${category.imageURL}" alt="category image"/>
+ 							<img th:src="${category.imageURL}" alt="category image"/>
  							
  						</a>
- 				</div>
- 			</div>
-				
+ 					</li>
+					
+			</ul>
+			</div>
 
 			<p th:each="tag: ${allTags}">
 				<a tag-count="0" class="tag"

@@ -41,13 +41,13 @@ public class PizzaReviewPopulator implements CommandLineRunner {
 		Tag pepperoni = new Tag("Pepperoni");
 		tagRepo.save(pepperoni);
 
-		Category frozen = new Category("Frozen");
+		Category frozen = new Category("Frozen", "../images/googleimages-frozen-pizza-img.jpg");
 		categoryRepo.save(frozen);
 
-		Category carryOut = new Category("Carry-Out");
+		Category carryOut = new Category("Carry-Out", "../images/carryoutpizza.jpg");
 		categoryRepo.save(carryOut);
 
-		Category restaurant = new Category("Restaurant");
+		Category restaurant = new Category("Restaurant", "../images/pexels-vegetables-italian-pizza-restaurant.jpg");
 		categoryRepo.save(restaurant);
 
 		PizzaReview rev1 = new PizzaReview("Digiorno Rising Crust Pizza", "../images/Digiorno.png",

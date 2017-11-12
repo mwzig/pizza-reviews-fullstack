@@ -14,6 +14,7 @@ public class Category {
 	@GeneratedValue
 	private Long id;
 	private String name;
+	private String imageURL;
 
 	@OneToMany(mappedBy = "category")
 	Set<PizzaReview> pizzaReviews;
@@ -22,8 +23,9 @@ public class Category {
 
 	}
 
-	public Category(String name) {
+	public Category(String name, String imageURL) {
 		this.name = name;
+		this.imageURL = imageURL;
 	}
 
 	public Long getId() {
@@ -38,9 +40,14 @@ public class Category {
 		return pizzaReviews;
 	}
 
+	public String getImageURL() {
+		return imageURL;
+	}
+
 	@Override
 	public String toString() {
-		return "Category [id=" + id + ", name=" + name + ", pizzaReviews=" + pizzaReviews + "]";
+		return "Category [id=" + id + ", name=" + name + ", imageURL=" + imageURL + ", pizzaReviews=" + pizzaReviews
+				+ "]";
 	}
 
 }
