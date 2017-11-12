@@ -8,7 +8,7 @@
 </head>
 
 <body>
-	<header id="reviewsListHeader">
+	<header id="reviewsHeader">
 		<h1 th:text="${tag.name} + ' Pizza Reviews'"></h1>
 	</header>
 
@@ -17,6 +17,9 @@
 			<a th:href="@{/singleReview(id=${pizzaReview.id})}" th:text="${pizzaReview.title}"></a>
 		</li>
 	</ul>
+	
+	<a class="centerText" href="http://localhost:8080/categoryList">Back		to Home</a>
+	
 
 </body>
 </html>
