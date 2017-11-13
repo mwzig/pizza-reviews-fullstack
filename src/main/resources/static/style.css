@@ -88,6 +88,7 @@ img {
 /* the link tells how to do a better way of selecting attributes with < or > values 
    for sake of time, I am doing it the easy way here 
    https://www.bram.us/2016/10/13/css-attribute-value-less-than-greater-than-equals-selectors/
+   Also, there is a note in the controller on a better idea of how do do this.
 */
 .tag {
 	font-size: 2rem;
